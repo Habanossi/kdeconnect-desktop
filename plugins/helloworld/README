@@ -1,0 +1,9 @@
+
+#This plugin displays a notification to the user each time a package with type
+#"kdeconnect.ping" is received. If the package has something in the "message"
+#field, that will be displayed in the notification body.
+
+
+
+Lol no, this plugin sends "Hello World" to the users other machine. This is exactly the ping plugin, but with something in the "message"-
+field.

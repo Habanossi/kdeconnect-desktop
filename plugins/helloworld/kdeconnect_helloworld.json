@@ -1,0 +1,27 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "hermanniviljanen@gmail.com",
+                "Name": "Hermanni Viljanen",
+            }
+        ],
+        "Description": "Send and receive Hello Worlds",
+        "EnabledByDefault": true,
+        "Icon": "dialog-ok",
+        "Id": "kdeconnect_helloworld",
+        "License": "",
+        "Name": "Hello World",
+        "ServiceTypes": [
+            "KdeConnect/Plugin"
+        ],
+        "Version": "0.1",
+        "Website": ""
+    },
+    "X-KdeConnect-OutgoingPacketType": [
+        "kdeconnect.helloworld"
+    ],
+    "X-KdeConnect-SupportedPacketType": [
+        "kdeconnect.helloworld"
+    ]
+}
