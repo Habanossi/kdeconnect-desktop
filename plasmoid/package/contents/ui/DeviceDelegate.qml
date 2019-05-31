@@ -121,10 +121,29 @@ PlasmaComponents.ListItem
                 id: ring
                 iconSource: "irc-voice"
                 visible: findmyphone.available
-                tooltip: i18n("Ring my phone")
+                tooltip: i18n("Find Phone")
 
                 onClicked: {
                     findmyphone.ring()
+                }
+            }
+            
+             
+             PlasmaComponents.Button
+             {
+                HelloWorld {
+                    id: helloworld
+                    device: root.device
+                }
+
+                id: sendhelloworld
+                iconSource: "irc-voice"
+                visible: helloworld.available
+                tooltip: i18n("Hello World")
+
+                onClicked: {
+                    console.log("Clicked")
+                    helloworld.ring()
                 }
             }
 
