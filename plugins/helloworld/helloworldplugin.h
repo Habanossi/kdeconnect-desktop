@@ -9,7 +9,7 @@
 
 #include <core/kdeconnectplugin.h>
 
-#define PACKET_TYPE_HELLOWORLD QStringLiteral("kdeconnect.helloworld")
+#define PACKET_TYPE_HELLOWORLD QStringLiteral("kdeconnect.hello")
 
 class Q_DECL_EXPORT HelloWorldPlugin
     : public KdeConnectPlugin

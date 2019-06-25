@@ -12,24 +12,24 @@ QtObject {
 
     readonly property PluginChecker pluginChecker: PluginChecker {
         id: checker
-        pluginName: "helloworld"
+        pluginName: "ping"
     }
 
-    property variant helloWorld: null
+    property variant ping: null
 
     function ring() {
-        if (helloWorld) {
-            console.log("ringed");
-            helloWorld.sendHelloWorld();
+        if (ping) {
+            console.log("pinged");
+            ping.sendPing();
         }
     }
 
     onAvailableChanged: {
         if (available) {
-            console.log("hello world available")
-            helloWorld = HelloWorldDbusInterfaceFactory.create(device.id())
+            console.log("ping available")
+            ping = PingDbusInterfaceFactory.create(device.id())
         } else {
-            helloWorld = null
+            ping = null
         }
     }
 }

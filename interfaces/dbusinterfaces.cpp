@@ -149,6 +149,25 @@ FindMyPhoneDeviceDbusInterface::FindMyPhoneDeviceDbusInterface(const QString& de
 FindMyPhoneDeviceDbusInterface::~FindMyPhoneDeviceDbusInterface()
 {
 }
+//helloworld
+/*HelloWorldDeviceDbusInterface::HelloWorldDeviceDbusInterface(const QString& deviceId, QObject* parent):
+    OrgKdeKdeconnectDeviceHelloWorldInterface(DaemonDbusInterface::activatedService(), "/modules/kdeconnect/devices/" + deviceId + "/helloworld", QDBusConnection::sessionBus(), parent)
+{
+}
+
+HelloWorldDeviceDbusInterface::~HelloWorldDeviceDbusInterface()
+{
+}*/
+
+//ping
+/*PingDeviceDbusInterface::PingDeviceDbusInterface(const QString& deviceId, QObject* parent):
+    OrgKdeKdeconnectDevicePingInterface(DaemonDbusInterface::activatedService(), "/modules/kdeconnect/devices/" + deviceId + "/ping", QDBusConnection::sessionBus(), parent)
+{
+}
+
+PingDeviceDbusInterface::~PingDeviceDbusInterface()
+{
+}*/
 
 RemoteCommandsDbusInterface::RemoteCommandsDbusInterface(const QString& deviceId, QObject* parent):
     OrgKdeKdeconnectDeviceRemotecommandsInterface(DaemonDbusInterface::activatedService(), "/modules/kdeconnect/devices/" + deviceId + "/remotecommands", QDBusConnection::sessionBus(), parent)

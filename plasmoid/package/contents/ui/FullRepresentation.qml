@@ -32,7 +32,7 @@ Item {
         width: parent.width
         level: 3
         opacity: 0.6
-        text: i18n("No paired devices are available") //changee
+        text: i18n("No paired devices available") //changee
         visible: devicesView.count==0
     }
 

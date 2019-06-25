@@ -127,9 +127,25 @@ PlasmaComponents.ListItem
                     findmyphone.ring()
                 }
             }
-            
-             
-             PlasmaComponents.Button
+             //Find my ping
+           /* PlasmaComponents.Button
+            {
+                Ping {
+                    id: ping
+                    device: root.device
+                }
+
+                id: sendPing
+                iconSource: "irc-voice"
+                visible: ping.available
+                tooltip: i18n("Ping")
+
+                onClicked: {
+                    ping.ring()
+                }
+            }
+             */
+             /*PlasmaComponents.Button
              {
                 HelloWorld {
                     id: helloworld
@@ -138,7 +154,7 @@ PlasmaComponents.ListItem
 
                 id: sendhelloworld
                 iconSource: "irc-voice"
-                visible: helloworld.available
+                //visible: helloworld.available
                 tooltip: i18n("Hello World")
 
                 onClicked: {
@@ -146,7 +162,7 @@ PlasmaComponents.ListItem
                     helloworld.ring()
                 }
             }
-
+*/
             //SFTP
             PlasmaComponents.Button
             {

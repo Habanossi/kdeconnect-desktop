@@ -71,6 +71,7 @@ int main(int argc, char** argv)
     parser.addOption(QCommandLineOption(QStringLiteral("execute-command"), i18n("Executes a remote command by id"), QStringLiteral("id")));
     parser.addOption(QCommandLineOption(QStringList{QStringLiteral("k"), QStringLiteral("send-keys")}, i18n("Sends keys to a said device")));
     parser.addOption(QCommandLineOption(QStringLiteral("my-id"), i18n("Display this device's id and exit")));
+    parser.addOption(QCommandLineOption(QStringLiteral("helloworld"), i18n("Send Hello World")));
     about.setupCommandLine(&parser);
 
     parser.addHelpOption();
@@ -212,7 +213,14 @@ int main(int argc, char** argv)
                 msg.setArguments(QVariantList() << message);
             }
             blockOnReply(QDBusConnection::sessionBus().asyncCall(msg));
-        } else if(parser.isSet(QStringLiteral("send-sms"))) {
+        }
+         /* else if(parser.isSet(QStringLiteral("helloworld"))) {
+            QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), "/modules/kdeconnect/devices/"+device+"/helloworld", QStringLiteral("org.kde.kdeconnect.device.helloworld"), QStringLiteral("sendHelloWorld"));
+            blockOnReply(QDBusConnection::sessionBus().asyncCall(msg));
+        }
+        */
+        
+        else if(parser.isSet(QStringLiteral("send-sms"))) {
             if (parser.isSet(QStringLiteral("destination"))) {
                 QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), "/modules/kdeconnect/devices/"+device+"/telephony", QStringLiteral("org.kde.kdeconnect.device.telephony"), QStringLiteral("sendSms"));
                 msg.setArguments({ parser.value("destination"), parser.value("send-sms") });

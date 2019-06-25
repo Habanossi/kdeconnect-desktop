@@ -10,18 +10,18 @@
         "EnabledByDefault": true,
         "Icon": "dialog-ok",
         "Id": "kdeconnect_helloworld",
-        "License": "",
+        "License": "GPL",
         "Name": "Hello World",
         "ServiceTypes": [
             "KdeConnect/Plugin"
         ],
         "Version": "0.1",
-        "Website": ""
+        "Website": "https://github.com/Habanossi/kdeconnect-desktop"
     },
     "X-KdeConnect-OutgoingPacketType": [
-        "kdeconnect.helloworld"
+        "kdeconnect.hello"
     ],
     "X-KdeConnect-SupportedPacketType": [
-        "kdeconnect.helloworld"
+        "kdeconnect.hello"
     ]
 }

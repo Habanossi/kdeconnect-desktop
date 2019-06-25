@@ -48,9 +48,9 @@ Kirigami.Page
                         text: i18n("Unpair")
                     },
                     Kirigami.Action {
-                        text: i18n("Send Ping")
+                        text: i18n("Hello World")
                         onTriggered: {
-                            deviceView.currentDevice.pluginCall("ping", "sendPing");
+                            deviceView.currentDevice.pluginCall("helloworld", "sendHelloWorld");
                         }
                     }
                 ]
@@ -85,6 +85,15 @@ Kirigami.Page
                     label: i18n("Find Device")
                     onClicked: {
                         findmyphoneIface.ring()
+                    }
+                }
+                
+                PluginItem {
+                    readonly property var helloworldIface: HelloWorldDbusInterfaceFactory.create(deviceView.currentDevice.id())
+                    pluginName: "helloworld"
+                    label: i18n("Hello World")
+                    onClicked: {
+                        helloworldIface.sendHelloWorld()
                     }
                 }
 

@@ -38,6 +38,8 @@ geninterface(${CMAKE_SOURCE_DIR}/plugins/battery/batterydbusinterface.h deviceba
 geninterface(${CMAKE_SOURCE_DIR}/plugins/sftp/sftpplugin.h devicesftpinterface)
 geninterface(${CMAKE_SOURCE_DIR}/plugins/notifications/notificationsdbusinterface.h devicenotificationsinterface)
 geninterface(${CMAKE_SOURCE_DIR}/plugins/findmyphone/findmyphoneplugin.h devicefindmyphoneinterface)
+geninterface(${CMAKE_SOURCE_DIR}/plugins/helloworld/helloworldplugin.h devicehelloworldinterface) 
+geninterface(${CMAKE_SOURCE_DIR}/plugins/ping/pingplugin.h devicepinginterface) 
 geninterface(${CMAKE_SOURCE_DIR}/plugins/notifications/notification.h notificationinterface)
 geninterface(${CMAKE_SOURCE_DIR}/plugins/mprisremote/mprisremoteplugin.h mprisremoteinterface)
 geninterface(${CMAKE_SOURCE_DIR}/plugins/remotecontrol/remotecontrolplugin.h remotecontrolinterface)

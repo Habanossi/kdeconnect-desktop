@@ -46,5 +46,6 @@ QtObject {
 
     function pluginsChanged() {
         response.setPendingCall(device.hasPlugin("kdeconnect_" + pluginName))
+        console.log(pluginName) //debug
     }
 }

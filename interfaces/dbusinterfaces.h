@@ -28,6 +28,8 @@
 #include "interfaces/devicebatteryinterface.h"
 #include "interfaces/devicesftpinterface.h"
 #include "interfaces/devicefindmyphoneinterface.h"
+#include "interfaces/devicehelloworldinterface.h" //helloworld
+#include "interfaces/devicepinginterface.h" //ping
 #include "interfaces/devicenotificationsinterface.h"
 #include "interfaces/notificationinterface.h"
 #include "interfaces/mprisremoteinterface.h"
@@ -174,6 +176,25 @@ public:
     explicit FindMyPhoneDeviceDbusInterface(const QString& deviceId, QObject* parent = nullptr);
     ~FindMyPhoneDeviceDbusInterface() override;
 };
+//helloworld
+/*class KDECONNECTINTERFACES_EXPORT HelloWorldDeviceDbusInterface
+    : public OrgKdeKdeconnectDeviceHelloWorldInterface
+{
+    Q_OBJECT
+public:
+    explicit HelloWorldDeviceDbusInterface(const QString& deviceId, QObject* parent = nullptr);
+    ~HelloWorldDeviceDbusInterface(); // override;
+};*/
+
+//ping
+/*class KDECONNECTINTERFACES_EXPORT PingDeviceDbusInterface
+    : public OrgKdeKdeconnectDevicePingInterface
+{
+    Q_OBJECT
+public:
+    explicit PingDeviceDbusInterface(const QString& deviceId, QObject* parent = nullptr);
+    ~PingDeviceDbusInterface() override;
+};*/
 
 class KDECONNECTINTERFACES_EXPORT RemoteCommandsDbusInterface
     : public OrgKdeKdeconnectDeviceRemotecommandsInterface

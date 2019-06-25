@@ -47,7 +47,7 @@ PingPlugin::~PingPlugin()
 
 bool PingPlugin::receivePacket(const NetworkPacket& np)
 {
-    Daemon::instance()->sendSimpleNotification(QStringLiteral("pingReceived"), device()->name(), np.get<QString>(QStringLiteral("message"),i18n("Ping!")), QStringLiteral("dialog-ok"));
+    Daemon::instance()->sendSimpleNotification(QStringLiteral("pingReceived"), device()->name(), np.get<QString>(QStringLiteral("Hello World"),i18n("Pingered!")), QStringLiteral("dialog-ok"));
 
     return true;
 }
@@ -63,7 +63,7 @@ void PingPlugin::sendPing(const QString& customMessage)
 {
     NetworkPacket np(PACKET_TYPE_PING);
     if (!customMessage.isEmpty()) {
-        np.set(QStringLiteral("message"), customMessage);
+        np.set(QStringLiteral("Hello World"), customMessage);
     }
     bool success = sendPacket(np);
     qCDebug(KDECONNECT_PLUGIN_PING) << "sendPing:" << success;

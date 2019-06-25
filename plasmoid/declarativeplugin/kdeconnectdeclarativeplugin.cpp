@@ -47,6 +47,17 @@ QObject* createFindMyPhoneInterface(const QVariant& deviceId)
 {
     return new FindMyPhoneDeviceDbusInterface(deviceId.toString());
 }
+//Helloworld
+/*QObject* createHelloWorldInterface(const QVariant& deviceId)
+{
+    return new HelloWorldDeviceDbusInterface(deviceId.toString());
+}*/
+
+//Ping
+/*QObject* createPingInterface(const QVariant& deviceId)
+{
+    return new PingDeviceDbusInterface(deviceId.toString());
+}*/
 
 QObject* createRemoteKeyboardInterface(const QVariant& deviceId)
 {
@@ -87,7 +98,6 @@ void KdeConnectDeclarativePlugin::registerTypes(const char* uri)
     qmlRegisterType<DevicesSortProxyModel>(uri, 1, 0, "DevicesSortProxyModel");
     qmlRegisterUncreatableType<MprisDbusInterface>(uri, 1, 0, "MprisDbusInterface", QStringLiteral("You're not supposed to instantiate interfacess"));
     qmlRegisterUncreatableType<LockDeviceDbusInterface>(uri, 1, 0, "LockDeviceDbusInterface", QStringLiteral("You're not supposed to instantiate interfacess"));
-    qmlRegisterUncreatableType<FindMyPhoneDeviceDbusInterface>(uri, 1, 0, "FindMyPhoneDbusInterface", QStringLiteral("You're not supposed to instantiate interfacess"));
     qmlRegisterUncreatableType<RemoteKeyboardDbusInterface>(uri, 1, 0, "RemoteKeyboardDbusInterface", QStringLiteral("You're not supposed to instantiate interfacess"));
     qmlRegisterUncreatableType<DeviceDbusInterface>(uri, 1, 0, "DeviceDbusInterface", QStringLiteral("You're not supposed to instantiate interfacess"));
     qmlRegisterSingletonType<DaemonDbusInterface>(uri, 1, 0, "DaemonDbusInterface",
@@ -109,7 +119,14 @@ void KdeConnectDeclarativePlugin::initializeEngine(QQmlEngine* engine, const cha
     
     engine->rootContext()->setContextProperty(QStringLiteral("FindMyPhoneDbusInterfaceFactory")
       , new ObjectFactory(engine, createFindMyPhoneInterface));
-
+    //HelloWorld
+   /* engine->rootContext()->setContextProperty(QStringLiteral("HelloWorldDbusInterfaceFactory")
+      , new ObjectFactory(engine, createHelloWorldInterface));*/
+    
+        //Ping
+    /*engine->rootContext()->setContextProperty(QStringLiteral("PingDbusInterfaceFactory")
+      , new ObjectFactory(engine, createPingInterface));
+*/
     engine->rootContext()->setContextProperty(QStringLiteral("SftpDbusInterfaceFactory")
       , new ObjectFactory(engine, createSftpInterface));
 

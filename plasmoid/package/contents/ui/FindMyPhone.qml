@@ -45,6 +45,7 @@ QtObject {
 
     onAvailableChanged: {
         if (available) {
+            console.log("find my phone available")
             findMyPhone = FindMyPhoneDbusInterfaceFactory.create(device.id())
         } else {
             findMyPhone = null
